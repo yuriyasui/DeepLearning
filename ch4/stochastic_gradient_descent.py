@@ -9,7 +9,7 @@ from differentiation import numerical_gradient
 from dataset.mnist import load_mnist
 
 class TwoLayerNet:
-    def __init__(self, input_size, hidden_size, output_size, weight_init_std):
+    def __init__(self, input_size, hidden_size, output_size, weight_init_std=0.01):
         # initialize weight
         self.params = {}
         self.params['W1'] = weight_init_std * np.random.randn(input_size, hidden_size)
@@ -33,7 +33,7 @@ class TwoLayerNet:
         return cross_entropy_error(y, t)
 
     def accuracy(self, x, t):
-        y - self.predict(x)
+        y = self.predict(x)
         y = np.argmax(y, axis=1)
         t = np.argmax(t, axis=1)
 

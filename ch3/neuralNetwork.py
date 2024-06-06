@@ -1,9 +1,11 @@
 import numpy as np
 
+# if input exceeds 0, return 1
 def step_function(x):
     y = x > 0
     return y.astype(np.int)
 
+# 1/(1+e^(-x))
 def sigmoid(x):
     return 1/(1 + np.exp(-x))
 

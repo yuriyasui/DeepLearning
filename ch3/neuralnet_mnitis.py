@@ -3,7 +3,7 @@ sys.path.append(os.pardir) # setting to import parent directry's file
 import pickle
 import numpy as np
 from dataset.mnist import load_mnist
-import softmax
+from softmax import softmax
 from neuralNetwork import sigmoid
 
 def get_dataset():

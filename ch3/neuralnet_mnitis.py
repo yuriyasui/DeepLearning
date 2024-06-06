@@ -14,7 +14,7 @@ def init_network():
     with open("sample_weight.pkl", 'rb') as f:
         network = pickle.load(f)
         return network
-    
+
 def predict(network, x):
     W1, W2, W3 = network['W1'], network['W2'], network['W3']
     b1, b2, b3 = network['b1'], network['b2'], network['b3']
